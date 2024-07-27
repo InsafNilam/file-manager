@@ -24,3 +24,8 @@ class TestCase extends \Orchestra\Testbench\TestCase
         // perform environment setup
     }
 }
+
+// "scripts": {
+//     "test": "vendor/bin/phpunit",
+//     "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+//   },
