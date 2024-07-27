@@ -5,6 +5,7 @@ namespace LaravelGuru\LaravelFilehandler;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use LaravelGuru\LaravelFilehandler\Services\FileManager;
+use LaravelGuru\LaravelFilehandler\Services\FileService;
 
 class LaravelFilehandlerServiceProvider extends ServiceProvider
 {
@@ -64,8 +65,8 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel-filehandler');
 
         // Register the main class to use with the facade
-        $this->app->singleton('laravel-filehandler', function () {
-            return new FileManager;
+        $this->app->singleton('laravel-filehandler', function ($app) {
+            return FileService::getInstance($app->make(FileManager::class));
         });
     }
 

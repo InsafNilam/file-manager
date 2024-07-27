@@ -3,6 +3,7 @@
 namespace LaravelGuru\LaravelFilehandler;
 
 use Illuminate\Support\Facades\Facade;
+use LaravelGuru\LaravelFilehandler\Services\FileService;
 
 /**
  * @see \LaravelGuru\LaravelFilehandler\Skeleton\SkeletonClass
@@ -16,6 +17,6 @@ class LaravelFilehandlerFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-filehandler';
+        return FileService::class;
     }
 }
