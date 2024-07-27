@@ -25,6 +25,12 @@ class TestCase extends \Orchestra\Testbench\TestCase
     }
 }
 
+// "autoload-dev": {
+//     "psr-4": {
+//       "LaravelGuru\\LaravelFilehandler\\Tests\\": "tests"
+//     }
+//   },
+
 // "scripts": {
 //     "test": "vendor/bin/phpunit",
 //     "test-coverage": "vendor/bin/phpunit --coverage-html coverage"

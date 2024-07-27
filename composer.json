@@ -28,11 +28,6 @@
       "LaravelGuru\\LaravelFilehandler\\": "src"
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "LaravelGuru\\LaravelFilehandler\\Tests\\": "tests"
-    }
-  },
   "config": {
     "sort-packages": true
   },
