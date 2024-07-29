@@ -31,6 +31,8 @@ class TestCase extends \Orchestra\Testbench\TestCase
 //     }
 //   },
 
+//stable "dev"| "alpha"| "beta"| "RC"|"stable"
+
 // "scripts": {
 //     "test": "vendor/bin/phpunit",
 //     "test-coverage": "vendor/bin/phpunit --coverage-html coverage"

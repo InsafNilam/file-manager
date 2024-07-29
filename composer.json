@@ -40,5 +40,6 @@
         "LaravelFilehandler": "LaravelGuru\\LaravelFilehandler\\LaravelFilehandlerFacade"
       }
     }
-  }
+  },
+  "minimum-stability": "stable"
 }
