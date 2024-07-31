@@ -1,11 +1,32 @@
 {
   "name": "laravelguru/laravel-filehandler",
-  "description": "A powerful and easy-to-use file management package for Laravel, providing seamless file upload, storage, and retrieval functionalities with support for various storage drivers.",
+  "description": "The Laravel Inertia React File Management package seamlessly integrates file management into your Laravel applications using React and Inertia.js. Featuring prebuilt file input components and popup file dialogs, this package simplifies file uploads, storage, browsing, and management. Enjoy smooth single-page application (SPA) transitions, comprehensive file operations (uploading, downloading, deleting, moving), and a responsive file browser. Ideal for CMS, e-commerce platforms, project management tools, and personal portfolios, it streamlines file handling within Laravel. Get started quickly with easy installation and setup, and customize components to suit your specific needs.",
   "keywords": [
     "laravelguru",
-    "laravel-filehandler"
+    "laravel-filehandler",
+    "laravel-filemanagement",
+    "react-filemanagement",
+    "inertia-filemanagement",
+    "laravel-react-fileupload",
+    "inertia-laravel-filehandler",
+    "react-laravel-filehandling",
+    "laravel-inertia-filemanagement",
+    "react-fileupload-laravel",
+    "inertia-fileupload-laravel",
+    "react-laravel-filestorage",
+    "inertia-laravel-filestorage",
+    "react-filemanager-laravel",
+    "laravel-inertia-fileupload",
+    "laravel-react-filestorage",
+    "inertia-laravel-fileuploader",
+    "react-laravel-fileoperations",
+    "inertia-filemanagement-react",
+    "laravel-fileupload-component",
+    "react-laravel-filebrowser",
+    "inertia-laravel-filesystem",
+    "react-laravel-filemanager"
   ],
-  "homepage": "https://github.com/laravelguru/laravel-filehandler",
+  "homepage": "https://github.com/InsafNilam/file-manager.git",
   "license": "MIT",
   "type": "library",
   "authors": [
@@ -17,6 +38,8 @@
   ],
   "require": {
     "php": "^7.4|^8.0",
+    "inertiajs/inertia-laravel": ">=0.3.6",
+    "laravel/framework": "^7.0|^8.0|^9.0|^10.0",
     "illuminate/support": "^8.0"
   },
   "require-dev": {
@@ -41,5 +64,6 @@
       }
     }
   },
-  "minimum-stability": "stable"
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
