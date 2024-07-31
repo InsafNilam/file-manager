@@ -1,6 +1,6 @@
 {
   "name": "laravelguru/laravel-filehandler",
-  "description": "The Laravel Inertia React File Management package seamlessly integrates file management into your Laravel applications using React and Inertia.js. Featuring prebuilt file input components and popup file dialogs, this package simplifies file uploads, storage, browsing, and management. Enjoy smooth single-page application (SPA) transitions, comprehensive file operations (uploading, downloading, deleting, moving), and a responsive file browser. Ideal for CMS, e-commerce platforms, project management tools, and personal portfolios, it streamlines file handling within Laravel. Get started quickly with easy installation and setup, and customize components to suit your specific needs.",
+  "description": "The Laravel Inertia React File Management package seamlessly integrates file management into your Laravel applications using React and Inertia.js. Featuring prebuilt file input components and popup file dialogs, this package simplifies file uploads, storage, browsing, and management.",
   "keywords": [
     "laravelguru",
     "laravel-filehandler",
