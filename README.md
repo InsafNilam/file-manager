@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/laravelguru/laravel-filehandler.svg?style=flat-square)](https://packagist.org/packages/laravelguru/laravel-filehandler)
 [![Total Downloads](https://img.shields.io/packagist/dt/laravelguru/laravel-filehandler.svg?style=flat-square)](https://packagist.org/packages/laravelguru/laravel-filehandler)
-![GitHub Actions](https://github.com/laravelguru/laravel-filehandler/actions/workflows/main.yml/badge.svg)
+![GitHub Actions](https://github.com/InsafNilam/file-manager/actions/workflows/main.yml/badge.svg)
 
 ## Overview
 
