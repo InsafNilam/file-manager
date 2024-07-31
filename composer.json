@@ -56,10 +56,10 @@
     ],
     "psr-4": {
       "LaravelGuru\\LaravelFilehandler\\": "src",
-      "LaravelGuru\\LaravelFilehandler\\App\\Http\\Controllers": "src/app/Http/Controllers",
-      "LaravelGuru\\LaravelFilehandler\\App\\Http\\Resources": "src/app/Http/Resources",
-      "LaravelGuru\\LaravelFilehandler\\App\\Models": "src/app/Models",
-      "LaravelGuru\\LaravelFilehandler\\App\\Services": "src/app/Services"
+      "LaravelGuru\\LaravelFilehandler\\App\\Http\\Controllers\\": "src/app/Http/Controllers",
+      "LaravelGuru\\LaravelFilehandler\\App\\Http\\Resources\\": "src/app/Http/Resources",
+      "LaravelGuru\\LaravelFilehandler\\App\\Models\\": "src/app/Models",
+      "LaravelGuru\\LaravelFilehandler\\App\\Services\\": "src/app/Services"
     }
   },
   "autoload-dev": {
