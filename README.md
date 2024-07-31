@@ -8,7 +8,7 @@
 
 The Laravel Inertia React File Management package provides seamless file management capabilities for your Laravel applications using React and Inertia.js. It includes prebuilt file input components and popup file dialogs for easy file uploads, storage, browsing, and management.
 
-#Features
+# Features
 
 - Seamless integration with React and Inertia.js
 - Utilizes ShadCN components for dialogs, buttons, scroll areas, and tabs
