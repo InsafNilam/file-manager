@@ -32,6 +32,10 @@ Run the following commands to publish the package assets:
 
 ```bash
 php artisan vendor:publish --tag=config
+
+or
+
+php artisan vendor:publish --tag=config
 php artisan vendor:publish --tag=migration
 php artisan vendor:publish --tag=controller
 php artisan vendor:publish --tag=resource
