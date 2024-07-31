@@ -47,12 +47,31 @@
     "phpunit/phpunit": "^9.0"
   },
   "autoload": {
+    "files": [
+      "src/app/Http/Controllers/FileController.php",
+      "src/app/Http/Resources/FileResource.php",
+      "src/app/Models/File.php",
+      "src/app/Services/FileManager.php",
+      "src/app/Services/FileService.php"
+    ],
     "psr-4": {
-      "LaravelGuru\\LaravelFilehandler\\": "src"
+      "LaravelGuru\\LaravelFilehandler\\": "src",
+      "LaravelGuru\\LaravelFilehandler\\App\\Http\\Controllers": "src/app/Http/Controllers",
+      "LaravelGuru\\LaravelFilehandler\\App\\Http\\Resources": "src/app/Http/Resources",
+      "LaravelGuru\\LaravelFilehandler\\App\\Models": "src/app/Models",
+      "LaravelGuru\\LaravelFilehandler\\App\\Services": "src/app/Services"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "LaravelGuru\\LaravelFilehandler\\": "tests/"
     }
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
   },
   "extra": {
     "laravel": {
