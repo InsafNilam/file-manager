@@ -1,5 +1,4 @@
 <?php
-
 namespace LaravelGuru\LaravelFilehandler\Http\Controllers;
 
 use LaravelGuru\LaravelFilehandler\Http\Resources\FileResource;
