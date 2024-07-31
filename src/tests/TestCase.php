@@ -1,6 +1,6 @@
 <?php
 
-namespace JohnDoe\BlogPackage\Tests;
+namespace LaravelGuru\LaravelFilehandler\Tests;
 
 use LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider;
 
