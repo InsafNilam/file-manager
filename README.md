@@ -31,7 +31,7 @@ composer require laravelguru/laravel-filehandler
 Run the following commands to publish the package assets:
 
 ```bash
-php artisan vendor:publish --tag=config
+php artisan vendor:publish
 
 or
 
