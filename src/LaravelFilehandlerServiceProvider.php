@@ -36,6 +36,30 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
                 ], 'migrations');
             }
 
+            $this->publishes([
+                __DIR__ . '/app/Http/Controllers' => app_path('Http/Controllers'),
+            ], 'controller');
+
+            $this->publishes([
+                __DIR__ . '/app/Http/Resources' => app_path('Http/Resources'),
+            ], 'resource');
+
+            $this->publishes([
+                __DIR__ . '/app/Models' => app_path('Models'),
+            ], 'model');
+
+            if (!is_dir(resource_path('js/Components/upload'))) {
+                mkdir(resource_path('js/Components/upload'), 0755, true);
+            }
+
+            $this->publishes([
+                __DIR__ . '/resources/js/Components' => resource_path('js/Components/upload'),
+            ], 'components');
+
+            $this->publishes([
+                __DIR__ . '/resources/css' => resource_path('css'),
+            ], 'css');
+
             // Publishing the views.
             /*$this->publishes([
                 __DIR__.'/../resources/views' => resource_path('views/vendor/laravel-filehandler'),
