@@ -55,7 +55,8 @@
       "src/app/Services/FileService.php"
     ],
     "psr-4": {
-      "LaravelGuru\\LaravelFilehandler\\": "src/app"
+      "LaravelGuru\\LaravelFilehandler\\": "src",
+      "LaravelGuru\\LaravelFilehandler\\App\\": "src/app"
     }
   },
   "autoload-dev": {
