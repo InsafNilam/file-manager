@@ -48,21 +48,24 @@
   },
   "autoload": {
     "files": [
-      "src/app/Http/Controllers/FileController.php",
-      "src/app/Http/Resources/FileResource.php",
-      "src/app/Models/File.php",
-      "src/app/Services/FileManager.php",
-      "src/app/Services/FileService.php"
+      "src/Http/Controllers/FileController.php",
+      "src/Http/Resources/FileResource.php",
+      "src/Models/File.php",
+      "src/Services/FileManager.php",
+      "src/Services/FileService.php"
     ],
     "psr-4": {
-      "LaravelGuru\\LaravelFilehandler\\": "src",
-      "LaravelGuru\\LaravelFilehandler\\App\\": "src/app"
+      "LaravelGuru\\LaravelFilehandler\\": "src"
     }
   },
   "autoload-dev": {
     "psr-4": {
       "LaravelGuru\\LaravelFilehandler\\": "tests/"
     }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
   },
   "config": {
     "sort-packages": true,
