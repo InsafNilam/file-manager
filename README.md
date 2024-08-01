@@ -31,17 +31,17 @@ composer require laravelguru/laravel-filehandler
 Run the following commands to publish the package assets:
 
 ```bash
-php artisan vendor:publish
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider"
 
 or
 
-php artisan vendor:publish --tag=config
-php artisan vendor:publish --tag=migration
-php artisan vendor:publish --tag=controller
-php artisan vendor:publish --tag=resource
-php artisan vendor:publish --tag=model
-php artisan vendor:publish --tag=components
-php artisan vendor:publish --tag=css
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=config
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=migration
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=controller
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=resource
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=model
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=components
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=css
 ```
 
 ## Install ShadCn Components
@@ -61,6 +61,23 @@ npx shadcn-ui@latest add scroll-area
 - Integrate Components: Use the provided React components and Inertia.js middleware in your application.
 - Customize: Modify the components and handlers as needed to fit your requirements.
 - Run Migrations: Apply the migrations to your database:
+
+# Register Service Provider
+
+If you are using laravel 11 or update version you should add the service provider into bootstrap/providers.php:
+
+```bash
+<?php
+
+return [
+    // Other Service Providers
+    LaravelGuru\LaravelFilehandler\ServiceProvider::class,
+];
+```
+
+# Run Migration
+
+The service provider will automatically generate a migration for the file_repos table when the application boots. Run the migration using:
 
 ```bash
 php artisan migrate
