@@ -37,15 +37,15 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
             }
 
             $this->publishes([
-                __DIR__ . '/app/Http/Controllers' => app_path('Http/Controllers'),
+                __DIR__ . '/Http/Controllers' => app_path('Http/Controllers'),
             ], 'controller');
 
             $this->publishes([
-                __DIR__ . '/app/Http/Resources' => app_path('Http/Resources'),
+                __DIR__ . '/Http/Resources' => app_path('Http/Resources'),
             ], 'resource');
 
             $this->publishes([
-                __DIR__ . '/app/Models' => app_path('Models'),
+                __DIR__ . '/Models' => app_path('Models'),
             ], 'model');
 
             if (!is_dir(resource_path('js/Components/upload'))) {
@@ -97,7 +97,7 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
     protected function registerRoutes()
     {
         Route::group($this->routeConfiguration(), function () {
-            $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+            $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         });
     }
 
