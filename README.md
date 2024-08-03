@@ -180,7 +180,7 @@ This package offers ready-to-use file input and multiple file handling component
 ```
 
 - Controller Method for the Create Function
-  **Ensure Focus on the documents variable during File Synchronization in Your Views**
+**Ensure Focus on the documents variable during File Synchronization in Your Views**
 
 ```php
 public function create()
