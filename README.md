@@ -180,7 +180,7 @@ This package offers ready-to-use file input and multiple file handling component
 ```
 
 - Controller Method for the Create Function
-  **Ensure Focus on the documents variable during File Synchronization in Your Views**
+  (**Ensure Focus on the documents variable during File Synchronization in Your Views**)
 
 ```php
 public function create()
@@ -196,7 +196,7 @@ public function create()
 ```
 
 - Guide to Using File Input for File Synchronization in your Create View
-  **Ensure Focus on the documents variable + brochures during File Synchronization in Your Views**
+  (**Ensure Focus on the documents variable + brochures during File Synchronization in Your Views**)
 
 ```JSX
 export default function Create({ auth, documents, faculties }) {
@@ -265,7 +265,7 @@ export default function Create({ auth, documents, faculties }) {
 ```
 
 - Controller Method for the Store Function
-  **Ensure Focus on the brochures variable during File Store in respective database table**
+  (**Ensure Focus on the brochures variable during File Store in respective database table**)
 
 ```php
     public function store(StoreCourseRequest $request)
@@ -289,7 +289,7 @@ export default function Create({ auth, documents, faculties }) {
 ```
 
 - Controller Method for the Edit Function
-  **Ensure Focus on the documents variable + brochures during File Synchronization in Your Views**
+  (**Ensure Focus on the documents variable + brochures during File Synchronization in Your Views**)
 
 ```php
     public function edit(Course $course)
@@ -314,7 +314,7 @@ export default function Create({ auth, documents, faculties }) {
 ```
 
 - Guide to Using File Input for File Synchronization in your Edit View
-  **Ensure Focus on the documents variable + brochures during File Synchronization in Your Views**
+  (**Ensure Focus on the documents variable + brochures during File Synchronization in Your Views**)
 
 ```JSX
 export default function Edit({auth, course, brochures, documents, faculties }){
@@ -382,7 +382,7 @@ export default function Edit({auth, course, brochures, documents, faculties }){
 ```
 
 - Controller Method for the Update Function
-  **Ensure Focus on the brochures variable during File Update in respective database table**
+  (**Ensure Focus on the brochures variable during File Update in respective database table**)
 
 ```php
     public function update(UpdateCourseRequest $request, Course $course)
@@ -427,7 +427,7 @@ export default function Edit({auth, course, brochures, documents, faculties }){
 ```
 
 - Controller Method for the Edit Function
-  **Ensure Focus on the cv_path and documents variable during File Edit during File Synchronization in Your Views**
+  (**Ensure Focus on the cv_path and documents variable during File Edit during File Synchronization in Your Views**)
 
 ```php
   public function edit(User $user)
@@ -450,7 +450,7 @@ export default function Edit({auth, course, brochures, documents, faculties }){
 ```
 
 - Guide to Using File Input for File Synchronization in your Edit View
-  **Ensure Focus on the cv_path variable + brochures during File Synchronization in Your Views**
+  (**Ensure Focus on the cv_path variable + brochures during File Synchronization in Your Views**)
 
 ```JSX
 export default function EditStaff({ auth, user, cv_path, documents }) {
@@ -483,7 +483,7 @@ export default function EditStaff({ auth, user, cv_path, documents }) {
 #### Handle Show File
 
 - Controller Method for the Show Function (multiple + single)
-  **Ensure Focus on the brochures variable during File Show during File Synchronization in Your Views**
+  (**Ensure Focus on the brochures variable during File Show during File Synchronization in Your Views**)
 
 ```php
     public function show(Course $course)
@@ -504,7 +504,7 @@ export default function EditStaff({ auth, user, cv_path, documents }) {
 ```
 
 - Guide to display files that used File Input for File Synchronization in your Show View
-  **Ensure Focus on the brochures variable during File Synchronization in Your Views**
+  (**Ensure Focus on the brochures variable during File Synchronization in Your Views**)
 
 ```JSX
 export default function Show({ auth, course, brochures, modules }) {
