@@ -34,6 +34,10 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
                     __DIR__ . '/../database/migrations/create_files_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_files_table.php'),
                     // you can add any number of migrations here
                 ], 'migration');
+
+                $this->publishes([
+                    __DIR__ . '/Models' => app_path('Models'),
+                ], 'model');
             }
 
             $this->publishes([
@@ -44,9 +48,6 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
                 __DIR__ . '/Http/Resources' => app_path('Http/Resources'),
             ], 'resource');
 
-            $this->publishes([
-                __DIR__ . '/Models' => app_path('Models'),
-            ], 'model');
 
             if (!is_dir(resource_path('js/Components/upload'))) {
                 mkdir(resource_path('js/Components/upload'), 0755, true);
@@ -89,7 +90,7 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel-filehandler');
 
         // Register the main class to use with the facade
-        $this->app->singleton('laravel-filehandler', function ($app) {
+        $this->app->bind('laravel-filehandler', function ($app) {
             return FileService::getInstance($app->make(FileManager::class));
         });
     }
