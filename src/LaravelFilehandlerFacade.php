@@ -17,6 +17,6 @@ class LaravelFilehandlerFacade extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return FileService::class;
+        return 'laravel-filehandler';
     }
 }
