@@ -26,9 +26,33 @@ You can install the package via composer:
 composer require laravelguru/laravel-filehandler
 ```
 
+# Register Service Provider
+
+If you are using laravel 11 or update version you should add the service provider into bootstrap/providers.php:
+
+```bash
+<?php
+
+return [
+    // Other Service Providers
+    LaravelGuru\LaravelFilehandler\ServiceProvider::class,
+];
+```
+
 ## Publishing Assets
 
 Run the following commands to publish the package assets:
+
+- This package is designed to be loaded only when the application is running in a web environment, ensuring it's not unnecessarily loaded during command-line operations. By checking if the app is running in the console using app()->runningInConsole();
+
+```bash
+    php artisan serve
+    npm run dev
+```
+
+- The package optimizes performance by activating only when needed for web requests, keeping the application lightweight during CLI operations.
+
+Then;
 
 ```bash
 php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider"
@@ -61,19 +85,6 @@ npx shadcn-ui@latest add scroll-area
 - Integrate Components: Use the provided React components and Inertia.js middleware in your application.
 - Customize: Modify the components and handlers as needed to fit your requirements.
 - Run Migrations: Apply the migrations to your database:
-
-# Register Service Provider
-
-If you are using laravel 11 or update version you should add the service provider into bootstrap/providers.php:
-
-```bash
-<?php
-
-return [
-    // Other Service Providers
-    LaravelGuru\LaravelFilehandler\ServiceProvider::class,
-];
-```
 
 # Run Migration
 
