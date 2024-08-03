@@ -26,40 +26,35 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('laravel-filehandler.php'),
-            ], 'config');
+                __DIR__ . '/../config/config.php' => config_path('filehandler.php'),
+            ], 'filehandler-config');
 
             if (!class_exists('File')) {
                 $this->publishes([
                     __DIR__ . '/../database/migrations/create_files_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_files_table.php'),
                     // you can add any number of migrations here
-                ], 'migration');
+                ], 'filehandler-migration');
 
                 $this->publishes([
                     __DIR__ . '/Models' => app_path('Models'),
-                ], 'model');
+                ], 'filehandler-model');
             }
 
             $this->publishes([
                 __DIR__ . '/Http/Controllers' => app_path('Http/Controllers'),
-            ], 'controller');
+            ], 'filehandler-controller');
 
             $this->publishes([
                 __DIR__ . '/Http/Resources' => app_path('Http/Resources'),
-            ], 'resource');
-
-
-            if (!is_dir(resource_path('js/Components/upload'))) {
-                mkdir(resource_path('js/Components/upload'), 0755, true);
-            }
+            ], 'filehandler-resource');
 
             $this->publishes([
-                __DIR__ . '/resources/js/Components' => resource_path('js/Components/upload'),
-            ], 'components');
+                __DIR__ . '/../resources/js/Components' => resource_path('js/Components/upload'),
+            ], 'filehandler-components');
 
             $this->publishes([
-                __DIR__ . '/resources/css' => resource_path('css'),
-            ], 'css');
+                __DIR__ . '/../resources/css' => resource_path('css'),
+            ], 'filehandler-css');
 
             // Publishing the views.
             /*$this->publishes([
@@ -90,7 +85,7 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel-filehandler');
 
         // Register the main class to use with the facade
-        $this->app->bind('laravel-filehandler', function ($app) {
+        $this->app->singleton('LaravelFilehandler', function ($app) {
             return FileService::getInstance($app->make(FileManager::class));
         });
     }
@@ -105,8 +100,8 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
     protected function routeConfiguration()
     {
         return [
-            'prefix' => config('api.prefix'),
-            'middleware' => config('api.middleware'),
+            'prefix' => config('laravel-filehandler.prefix'),
+            'middleware' => config('laravel-filehandler.middleware'),
         ];
     }
 }
