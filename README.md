@@ -78,7 +78,7 @@ php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServicePro
 php artisan storage:link
 ```
 
-## Install shadcn/ui Components
+## Install shadcn/ui Components (only if predefined components are used)
 
 Initialize the shadcn/ui components by following the [official installation guide](https://ui.shadcn.com/docs/installation/laravel). Use the commands below to add the required components:
 
