@@ -26,7 +26,7 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('filehandler.php'),
+                __DIR__ . '/../config/filehandler.php' => config_path('filehandler.php'),
             ], 'filehandler-config');
 
             if (!class_exists('File')) {
