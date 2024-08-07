@@ -59,17 +59,17 @@ Run the following commands to publish the package assets:
 - Otherwise, you need to require everything
 
 ```bash
-php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider"
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider"
 
 or
 
-php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=filehandler-config
-php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=filehandler-migration
-php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=filehandler-controller
-php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=filehandler-resource
-php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=filehandler-model
-php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=filehandler-components
-php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\ServiceProvider" --tag=filehandler-css
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider" --tag=filehandler-config
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider" --tag=filehandler-migration
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider" --tag=filehandler-controller
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider" --tag=filehandler-resource
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider" --tag=filehandler-model
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider" --tag=filehandler-components
+php artisan vendor:publish --provider="LaravelGuru\LaravelFilehandler\LaravelFilehandlerServiceProvider" --tag=filehandler-css
 ```
 
 ## Link up the Storage of the Laravel
