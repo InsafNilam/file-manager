@@ -26,19 +26,19 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__ . '/../config/config.php' => config_path('filehandler.php'),
+                __DIR__ . '/../config/config.php' => config_path('file-handler.php'),
             ], 'filehandler-config');
 
-            if (!class_exists('File')) {
-                $this->publishes([
-                    __DIR__ . '/../database/migrations/create_files_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_files_table.php'),
-                    // you can add any number of migrations here
-                ], 'filehandler-migration');
+            $this->publishes([
+                __DIR__ . '/../database/migrations/create_files_table.php.stub' => database_path('migrations/' . date('Y_m_d_His', time()) . '_create_files_table.php'),
+                // you can add any number of migrations here
+            ], 'filehandler-migration');
 
-                $this->publishes([
-                    __DIR__ . '/Models' => app_path('Models'),
-                ], 'filehandler-model');
-            }
+            // if (!class_exists('File')) {}
+
+            $this->publishes([
+                __DIR__ . '/Models/File.php' => app_path('Models'),
+            ], 'filehandler-model');
 
             $this->publishes([
                 __DIR__ . '/Http/Controllers' => app_path('Http/Controllers'),
@@ -85,7 +85,7 @@ class LaravelFilehandlerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel-filehandler');
 
         // Register the main class to use with the facade
-        $this->app->singleton('LaravelFilehandler', function ($app) {
+        $this->app->singleton(FileService::class, function ($app) {
             return FileService::getInstance($app->make(FileManager::class));
         });
     }
